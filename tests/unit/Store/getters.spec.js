@@ -1,7 +1,7 @@
 import {
     getters
 } from '@/store';
-import { fakeProduct, fakeState } from '../mocks';
+import { fakeState } from '../mocks';
 
 
 describe('countItemsInCart', () => {
