@@ -1,15 +1,15 @@
 <template>
   <div class="row mb-1 cartproduct">
     <div class="col-1 align-self-center text-center">
-      <span class="badge badge-light" data-cy-cartProductQty>
+      <span class="badge badge-light qty" data-cy-cartProductQty>
         x{{cartElement.qty}}
       </span>
     </div>
     <div class="col-8 media">
       <img class="mr-3 mh-100px" :src="product.img">
       <div class="media-body">
-        <h5 class="mt-0">{{ product.name }}</h5>
-        {{ product.description }}
+        <h5 class="mt-0 name">{{ product.name }}</h5>
+        <span class="description">{{ product.description }}</span>
       </div>
     </div>
     <div class="col-3  align-self-center text-right">

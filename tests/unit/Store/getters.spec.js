@@ -1,24 +1,11 @@
 import {
     getters
 } from '@/store';
-import { fakeProduct } from '../mocks';
+import { fakeProduct, fakeState } from '../mocks';
 
 
 describe('countItemsInCart', () => {
-    const state = {
-        products: [
-            fakeProduct(0),
-            fakeProduct(1),
-            fakeProduct(2)
-        ],
-        cartContent: [{
-            id: 0,
-            qty: 5
-        }, {
-            id: 1,
-            qty: 2
-        }]
-    };
+    const state = fakeState;
 
 
     it('Counts items in cart', () => {
