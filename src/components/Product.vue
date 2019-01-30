@@ -1,5 +1,5 @@
 <template>
-  <div class="col-3 mb-4 d-flex align-items-stretch">
+  <div class="col-3 mb-4 d-flex align-items-stretch product">
     <div class="card">
       <img class="card-img-top" :src="product.img" alt="Card image cap">
       <div class="card-body d-flex flex-column justify-content-between">

@@ -8,11 +8,10 @@ import {
   getters
 } from '@/store';
 import {
-  fakeState, fakeProduct
+  fakeState
 }
 from '../mocks';
 import CartProduct from '@/components/CartProduct.vue'
-import { wrap } from 'module';
 
 
 
@@ -42,7 +41,7 @@ describe('CartProduct.vue', () => {
     expect(wrapper.find('.description')
       .text()).toEqual('description')
     expect(wrapper.find('.qty')
-      .text()).toEqual(wrapper.props.cartElement.qty)
+      .text()).toEqual(`x${wrapper.props().cartElement.qty}`)
       
     expect(wrapper.vm.product.img).toBe('img');
   })
