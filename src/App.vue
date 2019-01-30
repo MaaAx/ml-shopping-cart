@@ -10,7 +10,7 @@
           <router-link tag="li" to="/cart" class="nav-item" active-class="active" exact>
             <a class="nav-link"> 
               Panier 
-              <span v-if="countItemsInCart > 0" class="badge badge-pill badge-dark">
+              <span class="badge badge-pill badge-dark">
                 {{ countItemsInCart }}
               </span>
             </a>

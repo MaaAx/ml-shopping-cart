@@ -1,7 +1,7 @@
 // https://docs.cypress.io/api/introduction/api.html
 
 describe('Mon test bonus', () => {
-  it('Adds two items in the cart, and checks the cart content', () => {
+  it('Adds two items in the cart, checks the cart content, removes cart content, checks if cart is empty', () => {
     cy.visit('/');
 
     cy.get('[data-cy-addToCart]')

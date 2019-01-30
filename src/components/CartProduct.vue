@@ -2,7 +2,7 @@
   <div class="row mb-1 cartproduct">
     <div class="col-1 align-self-center text-center">
       <span class="badge badge-light" data-cy-cartProductQty>
-        {{cartElement.qty}}
+        x{{cartElement.qty}}
       </span>
     </div>
     <div class="col-8 media">

@@ -36,7 +36,7 @@ export default new Vuex.Store({
       localStorage.setItem(CONFIG.LOCAL_STORAGE_NAME, JSON.stringify(state.cartContent));
     },
     REMOVE_PRODUCT_FROM_CART: (state, productId) => {
-      const cartProductIndex = state.cartContent.find(p => p.id == productId)
+      const cartProductIndex = state.cartContent.findIndex(p => p.id == productId)
       state.cartContent.splice(cartProductIndex, 1);
       localStorage.setItem(CONFIG.LOCAL_STORAGE_NAME, JSON.stringify(state.cartContent));
     },
