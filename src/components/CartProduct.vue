@@ -1,7 +1,7 @@
 <template>
   <div class="row mb-1 cartproduct">
     <div class="col-1 align-self-center text-center">
-      <span class="badge badge-light">
+      <span class="badge badge-light" data-cy-cartProductQty>
         {{cartElement.qty}}
       </span>
     </div>
@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="col-3  align-self-center text-right">
-      <button class="btn btn-danger" @click="remove()">Supprimer</button>
+      <button class="btn btn-danger" @click="remove()" data-cy-removeCartProduct>Supprimer</button>
     </div>
   </div>
 </template>

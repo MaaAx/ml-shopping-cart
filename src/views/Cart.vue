@@ -5,7 +5,7 @@
     </transition-group>
 
     <transition name="no-product" enter-active-class="animated bounceInUp" leave-active-class="animated bounceOutDown">
-      <div class="alert alert-warning" v-if="countItemsInCart == 0" >
+      <div class="alert alert-warning" v-if="countItemsInCart == 0" data-cy="alertNoProduct">
         <p class="mb-0">
           Votre panier est vide.
         </p>
