@@ -9,7 +9,6 @@
 
 <script>
 import { mapState } from 'vuex';
-import CONFIG from '@/config/app.config';
 import Product from '@/components/Product.vue';
 
 export default {

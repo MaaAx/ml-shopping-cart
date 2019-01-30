@@ -64,7 +64,7 @@ export default {
         this.getCartContent();
       })
       .catch(error => {
-        console.log(error);
+        alert(error);
       });
   }
 }
