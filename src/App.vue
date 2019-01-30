@@ -18,7 +18,9 @@
         </ul>
       </div> 
     </nav>
-    <Loader :isLoading="loading" /> 
+    <transition name="fade">
+      <Loader v-if="loading" msg="Chargement en cours"/> 
+    </transition>
 
     <router-view/>
   </div>
@@ -82,6 +84,14 @@ html, #app, .home {
 body {
   margin: 0;
   height: 100%;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to  {
+  opacity: 0;
 }
 
 </style>
