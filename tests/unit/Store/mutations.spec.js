@@ -1,7 +1,6 @@
 import {
   mutations
 } from '@/store';
-import { fakeProduct } from '../mocks';
 
 const {
   ADD_PRODUCT_IN_CART,
@@ -14,7 +13,7 @@ describe('ADD_PRODUCT_IN_CART', () => {
       cartContent: []
     }
 
-    ADD_PRODUCT_IN_CART(state, fakeProduct(0))
+    ADD_PRODUCT_IN_CART(state, 0)
 
     expect(state.cartContent.length).toBe(1)
     expect(state.cartContent[0].id).toBe(0)
@@ -27,8 +26,8 @@ describe('ADD_PRODUCT_IN_CART', () => {
       cartContent: []
     }
 
-    ADD_PRODUCT_IN_CART(state, fakeProduct(0))
-    ADD_PRODUCT_IN_CART(state, fakeProduct(1))
+    ADD_PRODUCT_IN_CART(state, 0)
+    ADD_PRODUCT_IN_CART(state, 1)
 
     expect(state.cartContent.length).toBe(2)
   })
@@ -37,8 +36,8 @@ describe('ADD_PRODUCT_IN_CART', () => {
     const state = {
       cartContent: []
     }
-    ADD_PRODUCT_IN_CART(state, fakeProduct(0))
-    ADD_PRODUCT_IN_CART(state, fakeProduct(0))
+    ADD_PRODUCT_IN_CART(state, 0)
+    ADD_PRODUCT_IN_CART(state, 0)
     expect(state.cartContent.length).toBe(1)
     expect(state.cartContent[0].id).toBe(0)
     expect(state.cartContent[0].qty).toBe(2)
@@ -52,8 +51,8 @@ describe('REMOVE_PRODUCT_FROM_CART', () => {
     const state = {
       cartContent: []
     }
-    ADD_PRODUCT_IN_CART(state, fakeProduct(0));
-    ADD_PRODUCT_IN_CART(state, fakeProduct(1));
+    ADD_PRODUCT_IN_CART(state, 0);
+    ADD_PRODUCT_IN_CART(state, 1);
     REMOVE_PRODUCT_FROM_CART(state, 1);
     expect(state.cartContent.length).toBe(1)
     expect(state.cartContent[0].id).toBe(0)
