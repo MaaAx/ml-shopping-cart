@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="col-3  align-self-center text-right">
-      <button class="btn btn-danger" @click="remove()" data-cy-removeCartProduct>Supprimer</button>
+      <button class="btn btn-danger" @click="remove()" data-cy-removeCartProduct>Remove</button>
     </div>
   </div>
 </template>

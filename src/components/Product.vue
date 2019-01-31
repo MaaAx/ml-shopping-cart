@@ -9,7 +9,7 @@
         <p class="card-text">
           {{product.description}}
         </p>
-        <button class="align-self-end btn btn-primary btn-block" data-cy-addToCart @click="addToCart()">Ajouter au panier</button>
+        <button class="align-self-end btn btn-primary btn-block" data-cy-addToCart @click="addToCart()">Add to cart</button>
       </div>
     </div>
   </div>

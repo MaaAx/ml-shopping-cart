@@ -1,15 +1,15 @@
 <template>
   <div id="app">
     <nav class="navbar sticky-top navbar-expand navbar-light bg-light justify-content-end mb-4">
-      <router-link class="navbar-brand" to="/">Mon Shop</router-link>
+      <router-link class="navbar-brand" to="/">Home</router-link>
       <div class="collapse navbar-collapse justify-content-end">
         <ul class="navbar-nav">
           <router-link tag="li" to="/" class="nav-item" active-class="active" exact>
-            <a class="nav-link">Produits</a>
+            <a class="nav-link">Products</a>
           </router-link>
           <router-link tag="li" to="/cart" class="nav-item" active-class="active" exact>
             <a class="nav-link"> 
-              Panier 
+              Cart 
               <span class="badge badge-pill badge-dark items-in-cart">
                 {{ countItemsInCart }}
               </span>
@@ -19,7 +19,7 @@
       </div> 
     </nav>
     <transition name="fade">
-      <Loader v-if="loading" msg="Chargement en cours"/> 
+      <Loader v-if="loading" msg="Loading"/> 
     </transition>
 
     <router-view/>
