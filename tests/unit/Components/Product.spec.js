@@ -7,6 +7,7 @@ import {
 from '../mocks';
 import Product from '@/components/Product.vue'
 
+
 describe('Product.vue', () => {
   it('renders Product with props data correctly', () => {
     let product = fakeProduct(0)
