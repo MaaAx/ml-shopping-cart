@@ -31,7 +31,7 @@ export default {
       'ADD_PRODUCT_IN_CART'
     ]),
     addToCart: function () {
-      this.ADD_PRODUCT_IN_CART(this.product)
+      this.ADD_PRODUCT_IN_CART(this.product.id)
     },
   }
 }

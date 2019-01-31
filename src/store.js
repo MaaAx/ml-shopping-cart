@@ -7,12 +7,17 @@ Vue.use(Vuex)
 
 
 export const mutations = {
-  ADD_PRODUCT_IN_CART: (state, product) => {
-    const cartProduct = state.cartContent.find(p => p.id == product.id)
-
+  /**
+   * Adds a cartProduct Object in the state.cartContent Array. 
+     Then it saves current cart in the Localstorage
+   * @param  {} state - Store's state
+   * @param  {} product - Product you want to add in cart's Id
+   */
+  ADD_PRODUCT_IN_CART: (state, productId) => {
+    const cartProduct = state.cartContent.find(p => p.id == productId)
     if (!cartProduct) {
       state.cartContent.push({
-        id: product.id,
+        id: productId,
         qty: 1
       });
     } else {
