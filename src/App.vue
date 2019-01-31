@@ -49,13 +49,21 @@ export default {
   },
   methods: {
     ...mapMutations(['SET_CART_PRODUCTS', 'SET_APP_PRODUCTS']),
+    
+    /**
+     * Gets product(s) saved in cart and sets it in the store if it exists
+     */
     getCartContent: function () {
-      const products = JSON.parse(localStorage.getItem(CONFIG.LOCAL_STORAGE_NAME));
-      if (products) {
-        this.SET_CART_PRODUCTS(products);
+      const savedCart = JSON.parse(localStorage.getItem(CONFIG.LOCAL_STORAGE_NAME));
+      if (savedCart) {
+        this.SET_CART_PRODUCTS(savedCart);
       }
     }
   },
+  
+  /**
+   * When App is created, loads products from DB and sets it in the stores, then hide the loader
+   */
   created() {
     this.loading = true;
     axios
